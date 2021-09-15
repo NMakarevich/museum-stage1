@@ -118,6 +118,7 @@ header .container {
   width: 199px;
   margin-right: 10px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .logo-icon {
   display: inline-block;
@@ -128,8 +129,13 @@ header .container {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-.logo-header {
+.logo-title {
+  font-family: "Forum";
+  font-size: 28px;
   font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
   color: white;
 }
 .logo:hover {
@@ -407,6 +413,11 @@ ul {
   background-image: url(../assets/svg/video-controls/big_play.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  transition: filter 0.3s;
+  cursor: pointer;
+}
+.section-video__video--big-play:hover {
+  filter: invert(22%) sepia(1%) saturate(0%) hue-rotate(111deg) brightness(99%) contrast(94%);
 }
 .section-video__video--controls {
   padding: 0 30px;
@@ -424,6 +435,10 @@ ul {
   cursor: pointer;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+.section-video__video--controls .controls-button:hover {
+  filter: invert(72%) sepia(0%) saturate(0%) hue-rotate(167deg) brightness(85%) contrast(88%);
 }
 .section-video__video--controls .button-play {
   width: 23px;
@@ -458,6 +473,11 @@ ul {
   background-color: white;
   border-radius: 50%;
   -webkit-appearance: none;
+  transition: all 0.3s;
+}
+.section-video__video--controls .progress::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #C4C4C4;
 }
 
 .section-gallery {
@@ -518,6 +538,125 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.section-contacts .contacts__container {
+  display: flex;
+  justify-content: space-between;
+}
+.section-contacts .contacts__container-information {
+  width: 244px;
+}
+.section-contacts .contacts__container-information h3 {
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.section-contacts .contacts__container-information .contacts-information__list--item {
+  margin-bottom: 25px;
+}
+.section-contacts .contacts__container-information .contacts-information__list--item a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.section-contacts .contacts__container-information .contacts-information__list--item a:hover {
+  color: #9d8665;
+}
+
+.footer .container {
+  display: flex;
+}
+.footer__main {
+  padding-top: 87px;
+  padding-bottom: 50px;
+}
+.footer__main-nav {
+  margin-left: 145px;
+  max-width: 363px;
+  margin-right: auto;
+}
+.footer__main-nav .nav-list {
+  flex-wrap: wrap;
+  column-gap: 150px;
+}
+.footer__main-nav .nav-list__item {
+  margin: 0;
+  margin-bottom: 25px;
+  flex: 1;
+  align-self: flex-start;
+}
+.footer__main-nav .nav-list__item:nth-child(5), .footer__main-nav .nav-list__item:nth-child(6) {
+  margin-bottom: 0;
+}
+.footer__main-socials {
+  display: flex;
+  column-gap: 25px;
+  align-self: flex-end;
+}
+.footer__main-socials--item {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #666666;
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 0px #666666);
+  transition: border-color 0.3s;
+}
+.footer__main-socials--link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: filter 0.3s;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+}
+.footer__main-socials--youtube {
+  background-image: url("../assets/svg/socials/Frame-4.svg");
+}
+.footer__main-socials--instagram {
+  background-image: url("../assets/svg/socials/Frame-3.svg");
+}
+.footer__main-socials--facebook {
+  background-image: url("../assets/svg/socials/Frame-2.svg");
+}
+.footer__main-socials--twitter {
+  background-image: url("../assets/svg/socials/Frame-1.svg");
+}
+.footer__main-socials--printerest {
+  background-image: url("../assets/svg/socials/Frame.svg");
+}
+.footer__main-socials--item:hover {
+  border-color: #9d8665;
+}
+.footer__main-socials--link:hover {
+  filter: invert(57%) sepia(8%) saturate(1508%) hue-rotate(356deg) brightness(93%) contrast(82%);
+}
+.footer__copyright {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 22px;
+}
+.footer__copyright a {
+  transition: color 0.3s;
+}
+.footer__copyright a:hover {
+  color: #9d8665;
+}
+
+.dividor {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #666666;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -145,6 +145,7 @@ header {
   width: 199px;
   margin-right: 10px;
   transition: all .3s;
+  cursor: pointer;
   &-icon {
     display: inline-block;
     width: 49px;
@@ -154,8 +155,13 @@ header {
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
-  &-header {
+  &-title {
+    font-family: "Forum";
+    font-size: $font-size-28;
     font-weight: $font-weight-400;
+    line-height: 31px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
     color: white
   }
   &:hover {
@@ -476,6 +482,12 @@ ul {
       background-image: url(../assets/svg/video-controls/big_play.svg);
       background-position: 50% 50%;
       background-repeat: no-repeat;
+      transition: filter .3s;
+      cursor: pointer;
+
+      &:hover {
+        filter: invert(22%) sepia(1%) saturate(0%) hue-rotate(111deg) brightness(99%) contrast(94%);
+      }
     }
 
     &--controls {
@@ -494,6 +506,11 @@ ul {
         cursor: pointer;
         background-position: 50% 50%;
         background-repeat: no-repeat;
+        transition: all .3s;
+
+        &:hover {
+          filter: invert(72%) sepia(0%) saturate(0%) hue-rotate(167deg) brightness(85%) contrast(88%);
+        }
       }
 
       .button-play {
@@ -535,6 +552,12 @@ ul {
         background-color: white;
         border-radius: 50%;
         -webkit-appearance: none;
+        transition: all .3s;
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 0 10px #C4C4C4;
+        }
       }
     }
   }
@@ -608,4 +631,150 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.section-contacts {
+
+  .contacts__container {
+    display: flex;
+    justify-content: space-between;
+
+    &-information {
+      width: 244px;
+  
+      h3 {
+        font-family: "Roboto";
+        font-size: $font-size-28;
+        font-weight: 500;
+        line-height: 33px;
+        letter-spacing: normal;
+        text-transform: none;
+      }
+  
+      .contacts-information__list--item {
+        margin-bottom: 25px;
+  
+        a {
+          color: black;
+          text-decoration: none;
+          transition: color .3s;
+        }
+  
+        a:hover {
+          color: $font-gold;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  .container {
+    display: flex;
+  }
+
+  &__main {
+    padding-top: 87px;
+    padding-bottom: 50px;
+
+    &-nav {
+      margin-left: 145px;
+      max-width: 363px;
+      margin-right: auto;
+      
+      .nav-list {
+        flex-wrap: wrap;
+        column-gap: 150px;
+
+        &__item {
+          margin: 0;
+          margin-bottom: 25px;
+          flex: 1;
+          align-self: flex-start;
+
+          &:nth-child(5),
+          &:nth-child(6) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &-socials {
+      display: flex;
+      column-gap: 25px;
+      align-self: flex-end;
+      
+      &--item {
+        display: block;
+        width: 48px;
+        height: 48px;
+        border: 1px solid #666666;
+        border-radius: 50%;
+        filter: drop-shadow(0px 0px 0px #666666);
+        transition: border-color .3s
+      }
+
+      &--link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: filter .3s;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+      }
+
+      &--youtube {
+        background-image: url('../assets/svg/socials/Frame-4.svg')
+      }
+
+      &--instagram {
+        background-image: url('../assets/svg/socials/Frame-3.svg')
+      }
+
+      &--facebook {
+        background-image: url('../assets/svg/socials/Frame-2.svg')
+      }
+
+      &--twitter {
+        background-image: url('../assets/svg/socials/Frame-1.svg')
+      }
+
+      &--printerest {
+        background-image: url('../assets/svg/socials/Frame.svg')
+      }
+
+      &--item:hover {
+        border-color: $font-gold;
+      }
+
+      &--link:hover {
+        filter: invert(57%) sepia(8%) saturate(1508%) hue-rotate(356deg) brightness(93%) contrast(82%);
+      }
+    }
+  }
+
+  &__copyright {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-size-22;
+    font-weight: $font-weight-100;
+    line-height: 22px;
+    
+    a {
+      transition: color .3s;
+      &:hover {
+        color: $font-gold;
+      }
+    }
+  }
+}
+
+.dividor {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #666666;
 }
